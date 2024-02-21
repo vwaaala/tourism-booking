@@ -1,0 +1,19 @@
+{
+    "name": "bunker/tourism-booking",
+    "description": "it contains service listing, product listing and booking service for typical travel agency",
+    "type": "project",
+    "license": "GNU",
+    "autoload": {
+        "psr-4": {
+            "Bunker\\TourismBooking\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rafiqul Islam Shawn",
+            "email": "vwaaala@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
