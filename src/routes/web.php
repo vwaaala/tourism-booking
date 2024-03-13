@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::group(['namespace' => 'Bunker\TourismBooking\Http\Controllers', 'middleware' => ['auth', 'web'], 'as' => 'tourism-booking.'], function () {
+Route::group(['namespace' => 'Bunker\TourismBooking\Http\Controllers\Admin', 'middleware' => ['auth', 'web'], 'as' => 'tourism-booking.'], function () {
     Route::get('regions', 'RegionController@index')->name('regions.index');
     Route::get('regions/create', 'RegionController@create')->name('regions.create');
     Route::post('regions/store', 'RegionController@store')->name('regions.store');
