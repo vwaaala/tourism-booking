@@ -9,18 +9,16 @@ class Region extends Model
 {
     use HasFactory;
 
-    protected $table = 'regions';
+    protected $table = 'tb_regions';
 
-    protected $fillable = ['uuid', 'thumbnail', 'status'];
+    protected $fillable = ['uuid', 'thumbnail', 'status', 'name_bd', 'name_en', 'slug'];
 
-    public function languages(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(RegionLang::class);
+
+    protected static function boot() {
+        parent::boot();
+
+        static::creating(function ($region) {
+            $region->slug = str()->slug($region->name_en);
+        });
     }
-
-    public function getRegionByLocale($locale)
-    {
-        return $this->languages()->where('lang', $locale)->first();
-    }
-
 }

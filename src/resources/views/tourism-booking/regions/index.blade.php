@@ -9,10 +9,7 @@
         </thead>
         <tbody>
         <tr>
-            @foreach($regions as $region)
-                <td>{{ $region->getRegionByLocale(app()->getLocale())->id }}</td>
-                <td>{{ $region->getRegionByLocale(app()->getLocale())->name }}</td>
-            @endforeach
+
         </tr>
         </tbody>
     </table>

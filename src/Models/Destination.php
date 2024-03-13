@@ -5,11 +5,11 @@ namespace Bunker\TourismBooking\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RegionLang extends Model
+class Destination extends Model
 {
     use HasFactory;
 
-    protected $table = 'region_lang';
+    protected $table = 'tb_destinations';
 
     protected $fillable = ['region_id', 'lang', 'name'];
 
